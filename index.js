@@ -4,6 +4,7 @@ let paddleBounce = new Audio('bounceOnPaddle.wav');
 let lost = new Audio('lost.wav');
 let completed = new Audio('levelCompleted.wav');
 let collsion = new Audio('collision.wav');
+let start = new Audio('start.wav');
 const ctx = canvas.getContext('2d');
 const ctx1 = canvas1.getContext('2d');
 let X, Y; //location of paddle
@@ -261,8 +262,9 @@ if(window.screen.width < 800){
 function x(){
 	setTimeout(() => {
 	PLAYGAME = setInterval(draw_on_canvas, 10);
-	setInterval(drawController, 10);}, 3000);
-	Text.draw('Game starts in 3 secs!');
+    setInterval(drawController, 10);}, 3000);
+    start.play();
+    Text.draw('Game starts in 3 secs!');
 	canvas.removeEventListener('click', x);
 }
 canvas.addEventListener('click', x);
