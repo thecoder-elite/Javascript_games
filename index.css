@@ -1,0 +1,48 @@
+body{
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	margin:0;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	background-color: #1a1a1a;
+}
+body h1{
+	font-family: 'Roboto', sans-serif;
+}
+
+body h2{
+	color:white;
+	font-family: 'Roboto', sans-serif;
+}
+#canvas{
+	border:1px solid white;
+	padding: 15px;
+	border-radius:20px;
+}
+#canvas1{
+	border:1px solid white;
+	border-radius:20px;
+	margin-top:15px;
+	display:none;
+}
+#screen{
+	color: white;
+	background-color: blue;
+	border: none;
+	padding: 5px;
+	height: 35px;
+	cursor: pointer;
+	font-size: 20px;
+	border-radius: 5px;
+	outline:none;
+	width: auto;
+	float: right;
+	box-shadow: 2px 2px 5px 0.5px white;
+}
+
+#screen:hover{
+	box-shadow: none;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Brick breaker</title>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id="container">
+        <h1 style="text-align:left; color:white">Brick Breaker <button id = "screen" onclick = "toggleFullscreen()">Go Fullscreen</button> </h1>
+        <canvas id="canvas">
+        </canvas>
+       <canvas id="canvas1">
+        </canvas>
+       <div style="display:inline">
+           <h2 style="text-align:center" id="curr_score">YOUR SCORE:</h2>
+           <h2 style="text-align:center" id="high_score">HIGH SCORE:</h2>
+       </div>
+   </div>
+    <noscript>Please Enable Javascript in your browser</noscript>
+    <script src="index.js"></script>
+    <script>
+        let screenFlag = 0;
+        function toggleFullscreen(){
+            if(screenFlag == 0){
+                let elem = document.querySelector("body");
+                elem.requestFullscreen()
+                .then( () => {
+                    document.getElementById("screen").innerText = "Exit Fullscreen";
+                    screenFlag=1
+                })
+                .catch(err => {
+                    console.log(err);                
+                });
+            }
+            else{
+                document.exitFullscreen();
+                document.getElementById("screen").innerText = "Go Fullscreen";
+                screenFlag=0;
+            }
+        }
+    </script>
+</body>
+</html>
