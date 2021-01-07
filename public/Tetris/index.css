@@ -1,0 +1,80 @@
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:#1d1e22;
+	height:auto;
+}
+.container{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:auto;
+	display:flex;
+	justify-content: center;
+	align-items:top;
+	
+}
+#canvas{
+	margin:none;
+	padding:none;
+	border: 1px solid white;
+}
+#scoreCard{
+	color:white;
+	font-family:'arial';
+	display:flex;
+	justify-content:top;
+	align-items:center;
+	flex-direction:column;
+}
+#scoreCard h3{
+	padding: 0 10px;
+}
+#scoreCard h2{
+	border:1px solid white;
+	width:100%;
+	text-align:center;
+	margin:0;
+	background-color:white;
+	color:black
+}
+#nextTetriminos{
+	border:1px solid white;
+}
+@media only screen and (max-width: 750px){
+	.controller{
+		margin:20px 10px;
+		padding:0;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+		height:auto;
+		width:100%;
+	}
+	.controller button{
+		font-size:25px;
+		height:40px;
+		width:60px;
+		border-radius:5px;
+		outline:none;
+	}
+	.controller *{
+		margin:5px;
+	}
+	#scoreCard h3{
+		font-size:17px;
+	}
+	#scoreCard h2{
+		font-size:20px;
+	}
+	#scoreCard{
+		width:70px;
+		height:70px;
+	}
+	#nextTetriminos{
+		width:70px;
+		height:50px;
+	} 
+}
